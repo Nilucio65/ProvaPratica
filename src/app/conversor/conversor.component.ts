@@ -8,4 +8,31 @@ import { Component } from '@angular/core';
 export class ConversorComponent {
 
     v1: number = 0;
+    resp: number = 0
+    str1!: string;
+    str2!: string;
+
+    Converter(){
+      if(this.str1 == this.str2){
+        alert("Selecione moedas diferentes!");
+      }
+      else if(this.str1 == "R" && this.str2 == "D"){
+        this.resp = this.v1 / 5.07;
+      }
+      else if(this.str1 == "R" && this.str2 == "E"){
+        this.resp = this.v1 / 5.53;
+      }
+      else if(this.str1 == "D" && this.str2 == "R"){
+      this.resp = this.v1 * 5.07;
+      }
+      else if(this.str1 == "D" && this.str2 == "E"){
+        this.resp = this.v1 * 0.91;
+      }
+      else if(this.str1 == "E" && this.str2 == "D"){
+        this.resp = this.v1 / 0.91;
+      }
+      else if(this.str1 == "E" && this.str2 == "R"){
+        this.resp = this.v1 * 5.53;
+      }
+}
 }

@@ -7,10 +7,13 @@
   <title>Document</title>
 </head>
 <body >
-  <form class="card position-absolute top-50 start-50 translate-middle d-flex align-content-center flex-wrap ">
+  <div id="container" class="card position-absolute top-50 start-50 translate-middle d-flex align-content-center flex-wrap ">
+
     <p class="fs-2">Conversor de Moedas</p>
+
     <div  class="form-text">Selecione o tipo de moeda a ser convertida:</div>
-    <select class="form-select" aria-label="Default select example">
+
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="str1">
         <option value="R">Real</option>
         <option value="D">Dolar</option>
         <option value="E">Euro</option>
@@ -18,12 +21,12 @@
 
     <div class="mb-3">
       <label for="val" class="form-label">Valor</label>
-      <input type="number" class="form-control" id="val" aria-describedby="emailHelp">
+      <input type="number" class="form-control" id="val" aria-describedby="emailHelp" [(ngModel)]="v1">
 
       <div  class="form-text">Para:</div>
       </div>
 
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="str2">
         <option value="R">Real</option>
         <option value="D">Dolar</option>
         <option value="E">Euro</option>
@@ -33,9 +36,9 @@
 
     <div class="mb-3">
       <label for="resp" class="form-label" >Resultado:</label>
-      <input type="number" class="form-control" id="resp" readonly>
+      <input type="number" class="form-control" id="resp" readonly [(ngModel)]="resp">
     </div>
-    <button type="button" class="btn btn-primary">Calcular</button>
-  </form>
+    <button type="button" class="btn btn-primary" (click)="Converter()">Converter</button>
+  </div>
 </body>
 </html>
