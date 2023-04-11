@@ -32,13 +32,18 @@
         <option value="E">Euro</option>
       </select>
 
+      <div class="mb-3">
+        <label for="val" class="form-label">Valor do câmbio</label>
+        <input type="number" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="v2" (change)="Converter()">
+        </div>
 
 
     <div class="mb-3">
       <label for="resp" class="form-label" >Resultado:</label>
       <input type="number" class="form-control" id="resp" readonly [(ngModel)]="resp">
-    </div>
-    <button type="button" class="btn btn-primary" (click)="Converter()">Converter</button>
+
+  </div>
+    
   </div>
 </body>
 </html>
