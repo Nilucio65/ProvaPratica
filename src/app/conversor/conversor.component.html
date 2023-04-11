@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body >
+  <form class="card position-absolute top-50 start-50 translate-middle d-flex align-content-center flex-wrap ">
+    <p class="fs-2">Conversor de Moedas</p>
+    <div  class="form-text">Selecione o tipo de moeda a ser convertida:</div>
+    <select class="form-select" aria-label="Default select example">
+        <option value="R">Real</option>
+        <option value="D">Dolar</option>
+        <option value="E">Euro</option>
+      </select>
+
+    <div class="mb-3">
+      <label for="val" class="form-label">Valor</label>
+      <input type="number" class="form-control" id="val" aria-describedby="emailHelp">
+
+      <div  class="form-text">Para:</div>
+      </div>
+
+      <select class="form-select" aria-label="Default select example">
+        <option value="R">Real</option>
+        <option value="D">Dolar</option>
+        <option value="E">Euro</option>
+      </select>
+
+
+
+    <div class="mb-3">
+      <label for="resp" class="form-label" >Resultado:</label>
+      <input type="number" class="form-control" id="resp" readonly>
+    </div>
+    <button type="button" class="btn btn-primary">Calcular</button>
+  </form>
+</body>
+</html>
